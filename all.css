@@ -21,7 +21,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -47,32 +48,102 @@ table {
 	border-spacing: 0;
 }
 
-/*
+/**
    ↑↑↑ Reset CSS ↑↑↑
-*/
+**/
 
-.wrapper {
+img {
+    display: block;
+}
+
+.warp {
+    width: 1920px;
+    padding-top: 48px;
+    margin: 0 auto;
+}
+
+ul {
+    margin-left: 48px;
+    margin-bottom: 48px;
+}
+li {
+    position: relative;
+    text-align: left;
+    font: 24px PingFang TC;
+    line-height: 36px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+li p {
+    margin-bottom: 24px;
+}
+li::before {
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: #96A9C4;
+	border-radius: 50%;
+	top: 10px;
+	left: -32px;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 66px;
+    background:#96A9C4;
+    top: 18px;
+    left: -24px;
+}
+
+.container {
+    margin: 0 auto;
     width: 1200px;
 }
-.name {
-    top: 48px;
-    left: 360px;
-    width: 288px;
-    height: 180px;
+
+.user-name {
     text-align: left;
     font: 90px Andale Mono;
     line-height: 90px;
     letter-spacing: 0px;
     color: #000000;
-    margin-bottom: 24px;
-}
-
-.name-underline {
-    top: 252px;
-    left: 360px;
-    width: 1200px;
-    height: 0px;
-    border: 2px solid #000000;
     opacity: 1;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 24px;
     margin-bottom: 48px;
 }
+
+.profile {
+    width: 324px;
+    height: 324px;
+    margin-bottom: 48px;
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font: 32px PingFang TC;
+    line-height: 45px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 16px;
+}
+
+.en-subtitle {
+    width: 95px;
+    text-align: left;
+    font: 24px Roboto;
+    line-height: 32px;
+    letter-spacing: 0px;
+    color: #A00404;
+    opacity: 1;
+    margin-left: 16px;
+}
+
