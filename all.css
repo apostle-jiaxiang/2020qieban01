@@ -1,4 +1,5 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* ---------------- Reset CSS ---------------- */
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -48,9 +49,13 @@ table {
 	border-spacing: 0;
 }
 
-/**
-   ↑↑↑ Reset CSS ↑↑↑
-**/
+.container {
+    font: 32px PingFang TC;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* ---------------- Basic Setting ---------------- */
 
 img {
     display: block;
@@ -78,7 +83,9 @@ li {
 li p {
     margin-bottom: 24px;
 }
-li::before {
+
+/* ---------------- 灰藍色項目符號、時間線---------------- */
+li:before {
 	content: "";
 	position: absolute;
 	width: 16px;
@@ -89,7 +96,7 @@ li::before {
 	left: -32px;
 }
 
-.timeline::after {
+.timeline:after {
     content: "";
     position: absolute;
     width: 1px;
@@ -99,11 +106,7 @@ li::before {
     left: -24px;
 }
 
-.container {
-    margin: 0 auto;
-    width: 1200px;
-}
-
+/* ---------------- Header--------------- */
 .user-name {
     text-align: left;
     font: 90px Andale Mono;
@@ -122,11 +125,11 @@ li::before {
     margin-bottom: 48px;
 }
 
+/* ---------------- Main--------------- */
 .subtitle {
     display: flex;
     align-items: center;
     text-align: left;
-    font: 32px PingFang TC;
     line-height: 45px;
     letter-spacing: 0px;
     color: #000000;
@@ -137,7 +140,6 @@ li::before {
 }
 
 .en-subtitle {
-    width: 95px;
     text-align: left;
     font: 24px Roboto;
     line-height: 32px;
@@ -147,3 +149,119 @@ li::before {
     margin-left: 16px;
 }
 
+/* ---------------- Main-灰藍底區域--------------- */
+.dark-box {
+    position: relative;
+    background: #415165 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+    margin-bottom: 72px;
+}
+
+.subtitle-white {
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #FFF;
+    width: 83%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.en-subtitle-white {
+    font: 24px Roboto;
+    line-height: 32px;
+}
+
+.dark-box:after {
+    content: '';
+    position: absolute;
+    width: 1920px;
+    height: 360px;
+    background-color: #96A9C4;
+    z-index: -1;
+    left: -360px;
+    top: 67px;
+}
+
+.skill-list {
+    font: lighter 24px Roboto;
+    line-height: 32px;
+    border-left: 1px solid #FFF;
+    padding-left: 23px;
+    width: 216px;
+    margin-bottom: 55.5px;
+
+}
+.skill-list p {
+    margin-top: 16px;
+}
+.skill-list p:first-child {
+    margin-top: 0px;
+}
+
+/* ---------------- Main-工作經驗--------------- */
+.work-list {
+    border-left: 1px solid #96A9C4;
+    padding-left: 24px;
+    margin-left: 24px;;
+}
+
+.work-context {
+    width: 642px;
+    text-align: left;
+    font: Lighter 20px PingFang TC;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.wide {
+    margin-bottom: 32px;
+}
+
+.logo-hex {
+    width: 89.5px;
+    margin-bottom: 8px;
+}
+
+.logo-simtree {
+    width: 72px;
+    margin-bottom: 8px;
+}
+
+/* ---------------- Footer --------------- */
+footer {
+    padding-top: 24px;
+    background: #415165 0% 0% no-repeat padding-box;
+    color: white;
+    margin-top: 72px;
+}
+
+footer .subtitle-white {
+    margin-bottom: 32px;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-context {
+    font: lighter 24px PingFang TC;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.media-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 192px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
